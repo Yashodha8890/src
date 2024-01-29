@@ -1,0 +1,39 @@
+.container-navigation
+{
+    background-color: aqua;
+}
+
+body
+{
+    background-image: url(images/background-image.jpg);
+    width: 1200px;
+    margin: 16px auto;
+    background-size: cover;
+}
+
+footer
+{
+    padding-top: 50px;
+
+}
+
+.nav :hover
+{
+    background-color: lightblue;
+    color: black;
+    outline: blue;
+    text-decoration: underline;
+}
+
+.btn
+{
+    background-color: cadetblue;
+    color: black;
+}
+
+.btn:hover
+{
+    background-color: rgb(6, 66, 68);
+    color: #ffffff;
+}
+
