@@ -8,6 +8,10 @@
         </div>
         <div class = "col-sm-4">
             <p>Degree : CA - HAMK</p>
+            <?php
+            echo $_SERVER['SERVER_NAME'] . $PHP_SELF[$this];
+            ?>
+        ?>
         </div>                        
     </div>
       

@@ -15,10 +15,10 @@
 <body>
     <div class = "container"> <!--Container-->
         <div class = "row">
-            <div class = "col-sm-5 container-navigation">
-                <h1>Yashodha Amarasinghe</h1>                
+            <div class = "col-sm-4 container-navigation">
+                <h2>Yashodha Amarasinghe</h2>                
             </div>
-            <div class= "col-sm-7 container-navigation">
+            <div class= "col-sm-8 container-navigation">
                 <ul class="nav">
                     <li class="nav-item">
                       <a class="nav-link active" aria-current="page" href="ex1.php">Exercise 01</a>
@@ -27,10 +27,19 @@
                       <a class="nav-link" href="ex2.php">Exercise 02</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Exercise 03</a>
+                      <a class="nav-link" href="ex3.php">Exercise 03</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Exercise 04</a>
+                      <a class="nav-link" href="ex4.php">Exercise 04</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Exercise 05</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Exercise 06</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Exercise 07</a>
                     </li>
                   </ul>
             </div>
