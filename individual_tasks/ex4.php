@@ -100,7 +100,6 @@
             case "December":
             echo "Not August, this is " . $month . ", so I don't have any holidays.";
             break;
-
         } 
     ?>
 <br/>
@@ -123,8 +122,8 @@
             <input type="submit" value="Submit" name = "numbercheck" class = "btn btn-primary">
         </div>
     </form>
-
 <br/>
+
     <?php
     //Processing data of the form in the same page
     //Check for a post request
@@ -142,7 +141,6 @@
                 }
             }
     ?>
-
 <br/>
 
 <h3>4.5 While Loop: Write a PHP script that will print all the 
