@@ -15,7 +15,7 @@
         <input type="text" class="form-control" id="formGroupExampleInput2" name="age" placeholder="Enter your age" required>
     </div>
     <div class = "mt-2">
-    <input type="submit" value="Submit" class = "btn">
+    <input type="submit" value="Submit" name = "validate" class = "btn">
     </div>    
 </form>
 <br>
@@ -25,17 +25,21 @@
     
             if($_SERVER["REQUEST_METHOD"] == "POST")
             {
-                $name = $_POST["name"];
-                $age = $_POST["age"];
-        
-                if($age > 18)
+                if(isset($_POST['validate']))
                 {
-                    echo "Eligible for voting";
+                    $name = $_POST["name"];
+                    $age = $_POST["age"];
+            
+                    if($age > 18)
+                    {
+                        echo "Eligible for voting";
+                    }
+                    else
+                    {
+                        echo "Not eligible for voting";
+                    }
                 }
-                else
-                {
-                    echo "Not eligible for voting";
-                }
+                
             }
         
     ?>
@@ -116,7 +120,7 @@
             </div>
         </div>
         <div class = "mt-2">
-            <input type="submit" value="Submit" class = "btn btn-primary">
+            <input type="submit" value="Submit" name = "numbercheck" class = "btn btn-primary">
         </div>
     </form>
 
@@ -126,15 +130,16 @@
     //Check for a post request
             if($_SERVER["REQUEST_METHOD"] == "POST")
             {
-                $j = $_POST["number1"];
-                $n = $_POST["number2"];
-
-                for($i = 1; $i <= $n; $i++)
+                if(isset($_POST['numbercheck']))
                 {
-                    $answer = $j * $i;
-                    echo $j . " * " . $i . " = " . $answer . " " . "<br/>";     
+                    $j = $_POST["number1"];
+                    $n = $_POST["number2"];
+                    for($i = 1; $i <= $n; $i++)
+                    {
+                        $answer = $j * $i;
+                        echo $j . " * " . $i . " = " . $answer . " " . "<br/>";     
+                    }
                 }
-
             }
     ?>
 
@@ -156,7 +161,7 @@
             </div>
         </div>
         <div class = "mt-2">
-            <input type="submit" value="Submit" class = "btn btn-primary">
+            <input type="submit" value="Submit" name="numberLimit"class = "btn btn-primary">
         </div>
     </form>
 
@@ -166,15 +171,17 @@
 
         if($_SERVER["REQUEST_METHOD"] == "POST")
             {
-                $startingnumber = $_POST["starting_number"];
-                $number_n = $_POST["maximum_number"];
-
-                while($startingnumber <= $number_n)
+                if(isset($_POST['numberLimit']))
                 {
-                    echo $startingnumber . " ";
-                    $startingnumber++;
-                }
+                    $startingnumber = $_POST["starting_number"];
+                    $number_n = $_POST["maximum_number"];
 
+                    while($startingnumber <= $number_n)
+                    {
+                        echo $startingnumber . " ";
+                        $startingnumber++;
+                    }
+                }
             }
     ?>
     <br/>
