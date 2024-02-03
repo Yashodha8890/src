@@ -29,11 +29,22 @@ footer
 {
     background-color: cadetblue;
     color: black;
+    /* margin-left: 50%; */
+
+    
 }
+.button-position
+{
+    align-items: center;
+    
+}
+
 
 .btn:hover
 {
     background-color: rgb(6, 66, 68);
     color: #ffffff;
 }
+
+
 

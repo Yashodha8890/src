@@ -18,25 +18,31 @@
     styles to it. Note, you have already done a table in Exercise 1.
      If you wish, you can use the same table.</h3>
 
-     <table>
-        <tr><th>Student Id</th> <th>Name</th> <th>Grade</th></tr>
-        <tr>
-            <td>1</td>
-            <td>John</td>
-            <td><?php 5 ?></td>
-        </tr>
-
-        <tr>
-            <td>2</td>
-            <td>Alice</td>
-            <td><?php 4 ?></td>
-        </tr>
-
-        <tr>
-            <td>3</td>
-            <td>Bob</td>
-            <td><?php echo 3 ?></td>
-        </tr>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>John</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Alice</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>3</td>
+                <td>Bob</td>
+            </tr>
+        </tbody>
     </table>
     <br>
 
@@ -77,15 +83,15 @@
         ?>
     <br><br>
 
-    <h3>File Modification Time: Write a PHP script in the footer section of your universal footer 
+    <h3>3.8 File Modification Time: Write a PHP script in the footer section of your universal footer 
         to display the last modification time of a file. 
         Hint: Use predefined variable $_SERVER, basename function  
         to get the filename , filetime function to get the last modified time & 
         date function to print the date and time Predefined Variables </h3>
-
-      <!--   <?php
-            echo $_SERVER['SERVER_NAME'];
+    <br/>
+        <?php
+            echo basename($_SERVER["SCRIPT_FILENAME"], '.php') ." file was last modified on " . date('l jS \of F Y h:i:s A');
         ?>
- -->
+
 
 <?php include 'footer.php' ?>

@@ -16,32 +16,29 @@
     </div>
     <div class = "mt-2">
     <input type="submit" value="Submit" class = "btn">
-    </div>
-    
+    </div>    
 </form>
-
-<br/>
+<br>
     <?php
     //Processing data of the form in the same page
     //Check for a post request
-    if($_SERVER["REQUEST_METHOD"] == "POST")
-    {
-        $name = $_POST["name"];
-        $age = $_POST["age"];
-
-        if($age > 18)
-        {
-            echo "Eligible for voting";
-        }
-        else
-        {
-            echo "Not eligible for voting";
-        }
-    }
-
+    
+            if($_SERVER["REQUEST_METHOD"] == "POST")
+            {
+                $name = $_POST["name"];
+                $age = $_POST["age"];
+        
+                if($age > 18)
+                {
+                    echo "Eligible for voting";
+                }
+                else
+                {
+                    echo "Not eligible for voting";
+                }
+            }
+        
     ?>
-
-<br/><br/>
 
 <h3>4.3 Switch Case: Write a PHP script that gets the current month and prints one of the following responses, 
     depending on whether it's August or not: It's August, so it's still holiday.
@@ -102,68 +99,97 @@
 
         } 
     ?>
-
-
-
-<br/><br/>
+<br/>
 
 <h3>4.4 For Loop: Write a PHP script that will print the multiplication table 
     of a number (n).
 </h3>
-
-    <form>
+    <form method="post" action=<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>>
         <div class="row">
             <div class="col">
-                <label for="formGroupExampleInput3">Number for multiplication table :</label>
-                <input type="text" class="form-control" placeholder="First name">
+                <label for="formGroupExampleInput3">Enter the number which need multiplication :</label>
+                <input type="text" class="form-control" name = "number1" placeholder="Number">
             </div>
             <div class="col">
-                <label for="formGroupExampleInput4">Give the tmultiplication untill</label>
-                <input type="text" class="form-control" placeholder="Last name">
+                <label for="formGroupExampleInput4">Enter the required maximum multiplication number :</label>
+                <input type="text" class="form-control" name = "number2" placeholder="Maximum multiplication">
             </div>
         </div>
+        <div class = "mt-2">
+            <input type="submit" value="Submit" class = "btn btn-primary">
+        </div>
     </form>
+
+<br/>
     <?php
-        $n = 12;
-        $j = 1;
-        
-        for($i = 2; $j <= $n; $j++)
-        {
-             $answer = $i * $j ;
-             echo $i . " * " . $j . " = " . $answer . " " . "<br/>";     
-        }
+    //Processing data of the form in the same page
+    //Check for a post request
+            if($_SERVER["REQUEST_METHOD"] == "POST")
+            {
+                $j = $_POST["number1"];
+                $n = $_POST["number2"];
+
+                for($i = 1; $i <= $n; $i++)
+                {
+                    $answer = $j * $i;
+                    echo $j . " * " . $i . " = " . $answer . " " . "<br/>";     
+                }
+
+            }
     ?>
 
-<br/><br/>
+<br/>
 
 <h3>4.5 While Loop: Write a PHP script that will print all the 
     numbers from 1 to n.
 </h3>
-    <?php
-        $n = 20;
-        $i = 1;
-        while($i <= $n)
-        {
-            echo $i . " ";
-            $i++;
-        }
-    ?>
 
-<br/><br/>
+<form method="post" action=<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>>
+        <div class="row">
+            <div class="col">
+                <label for="formGroupExampleInput5">Enter the number which need multiplication :</label>
+                <input type="text" class="form-control" name = "starting_number" placeholder="Starting Number">
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput6">Enter the required maximum multiplication number :</label>
+                <input type="text" class="form-control" name = "maximum_number" placeholder="Maximum number">
+            </div>
+        </div>
+        <div class = "mt-2">
+            <input type="submit" value="Submit" class = "btn btn-primary">
+        </div>
+    </form>
+
+    <?php
+        //Processing data of the form in the same page
+        //Check for a post request
+
+        if($_SERVER["REQUEST_METHOD"] == "POST")
+            {
+                $startingnumber = $_POST["starting_number"];
+                $number_n = $_POST["maximum_number"];
+
+                while($startingnumber <= $number_n)
+                {
+                    echo $startingnumber . " ";
+                    $startingnumber++;
+                }
+
+            }
+    ?>
+    <br/>
 
 <h3>4.6 Foreach Loop: Write a PHP script that will 
     print all the elements of an array.
 </h3>
     <?php
-        $arrayTechie = array("HTML", "CSS", "PHP", "JavaScript");
+        $myarray = array("HTML", "CSS", "PHP", "JavaScript");
 
-        foreach($arrayTechie as $value)
+        foreach($myarray as $value)
         {
             echo $value . "<br/>";
         }
     ?>
-
-
-<br/><br/>
+<br/>
 
 <?php include 'footer.php' ?>
