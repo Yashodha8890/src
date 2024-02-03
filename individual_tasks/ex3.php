@@ -14,41 +14,38 @@
 </form>
 <br>
 
-<h3>3.4 HTML Table: Prepare a simple HTML table and apply Bootstrap 
-    styles to it. Note, you have already done a table in Exercise 1.
+<h3>3.4 HTML Table: Prepare a simple HTML table and apply Bootstrap styles to it. Note, you have already done a table in Exercise 1.
      If you wish, you can use the same table.</h3>
 
-    <table class="table table-dark">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Grade</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>John</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Alice</td>
-                <td>4</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>3</td>
-                <td>Bob</td>
-            </tr>
-        </tbody>
-    </table>
-    <br>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Grade</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>John</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Alice</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>3</td>
+            <td>Bob</td>
+        </tr>
+    </tbody>
+</table>
+    <br/>
 
-    <h3>3.5 String Variables: Write a PHP script with two string variables
-         ($str1 = "Hello"; $str2 = "World";). 
-        Join them together and print the length of the string.</h3>
+<h3>3.5 String Variables: Write a PHP script with two string variables ($str1 = "Hello"; $str2 = "World";). Join them together and print the length of the string.</h3>
 
         <?php
             $string1 = "Hello";
@@ -56,42 +53,36 @@
             $string3 = $string1. " " . $string2;            
             echo "String is :" . $string3 . "." . " " . "The length of the string is : " . strlen($string3);
         ?>
-    <br><br>
+    <br/><br/>
 
-    <h3>3.6 Number Addition: Write a script to add up the numbers: 298, 234, 46.
-         Use variables to store these numbers and an echo statement to output 
-         your answer.
-    </h3>
+<h3>3.6 Number Addition: Write a script to add up the numbers: 298, 234, 46. Use variables to store these numbers and an echo statement to output your answer.
+</h3>
 
-        <?php 
-            $number1 = 298;
-            $number2 = 234;
-            $number3 = 46;
+    <?php 
+        $number1 = 298;
+        $number2 = 234;
+        $number3 = 46;
 
-            $total = $number1 + $number2 + $number3;
+        $total = $number1 + $number2 + $number3;
 
-            echo "Sum of these three numbers (298 + 234 + 46) is " . $total . " .";
-        ?>
-    <br><br>
+        echo "Sum of these three numbers (298 + 234 + 46) is " . $total . " .";
+    ?>
+<br><br>
 
-    <h3>3.7 Browser Detection: Write a PHP script to detect the browser being used to view your 
-        pages. (Hint: Use predefined variables: $_SERVER).
-    </h3>
+<h3>3.7 Browser Detection: Write a PHP script to detect the browser being used to view your pages. (Hint: Use predefined variables: $_SERVER).
+</h3>
 
-        <?php
+    <?php
         echo "Server is : " . $_SERVER['SERVER_NAME'];
-        ?>
-    <br><br>
+    ?>
+<br><br>
 
-    <h3>3.8 File Modification Time: Write a PHP script in the footer section of your universal footer 
-        to display the last modification time of a file. 
-        Hint: Use predefined variable $_SERVER, basename function  
-        to get the filename , filetime function to get the last modified time & 
-        date function to print the date and time Predefined Variables </h3>
-    <br/>
-        <?php
-            echo basename($_SERVER["SCRIPT_FILENAME"], '.php') ." file was last modified on " . date('l jS \of F Y h:i:s A');
-        ?>
-
+<h3>3.8 File Modification Time: Write a PHP script in the footer section of your universal footer to display the last modification time of a file. Hint: Use predefined variable $_SERVER,
+    basename function to get the filename , filetime function to get the last modified time & date function to print the date and time Predefined Variables 
+</h3>
+<br/>
+    <?php
+        echo basename($_SERVER["SCRIPT_FILENAME"], '.php') ." file was last modified on " . date('l jS \of F Y h:i:s A');
+    ?>
 
 <?php include 'footer.php' ?>
